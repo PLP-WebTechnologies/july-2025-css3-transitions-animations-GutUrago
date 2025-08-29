@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS + JS Animation Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🌟 CSS & JavaScript Interactive Experience</h1>
+
+  <!-- Part 1: CSS Animations -->
+  <section>
+    <h2>Hover & Transition Effects</h2>
+    <button class="fancy-btn">Hover Me!</button>
+    <div class="animated-box"></div>
+  </section>
+
+  <!-- Part 2: JavaScript Functions -->
+  <section>
+    <h2>Reusable Functions Demo</h2>
+    <button onclick="showResult(5, 3)">Calculate Sum (5 + 3)</button>
+    <p id="result"></p>
+  </section>
+
+  <!-- Part 3: Combining CSS + JS -->
+  <section>
+    <h2>Trigger Animations with JavaScript</h2>
+    <button id="animateBtn">Animate Box</button>
+    <div id="jsBox"></div>
+
+    <button id="openModal">Open Modal</button>
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <p>This is a modal with CSS + JS animation!</p>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

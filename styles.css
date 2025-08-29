@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Part 1: CSS Animations ===== */
+
+/* Button hover effect */
+.fancy-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.fancy-btn:hover {
+  background: #45a049;
+  transform: scale(1.1);
+}
+
+/* Animated box (continuous animation) */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: dodgerblue;
+  margin: 20px auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+/* ===== Part 3: CSS + JS ===== */
+
+/* Box that animates when triggered */
+#jsBox {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 20px auto;
+  transition: transform 0.5s ease-in-out;
+}
+#jsBox.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Modal styling */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+#modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
